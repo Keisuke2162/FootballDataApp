@@ -6,9 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		679717B32CCED5E20086A087 /* RootFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 679717B22CCED5E20086A087 /* RootFeature */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		679717532CCECC010086A087 /* FootballDataApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = FootballDataApp.app; path = "/Users/kei3islands/Develop/FootballDataApp/build/Debug-iphoneos/FootballDataApp.app"; sourceTree = "<absolute>"; };
 		679717932CCECC9C0086A087 /* App */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = App; sourceTree = "<group>"; };
+		679717A52CCED0D70086A087 /* FootballDataApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballDataApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -24,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				679717B32CCED5E20086A087 /* RootFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,7 +40,16 @@
 			children = (
 				679717552CCECC010086A087 /* FootballDataApp */,
 				679717932CCECC9C0086A087 /* App */,
+				679717A52CCED0D70086A087 /* FootballDataApp.app */,
+				679717B12CCED5E20086A087 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		679717B12CCED5E20086A087 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -58,9 +72,10 @@
 			);
 			name = FootballDataApp;
 			packageProductDependencies = (
+				679717B22CCED5E20086A087 /* RootFeature */,
 			);
 			productName = FootballDataApp;
-			productReference = 679717532CCECC010086A087 /* FootballDataApp.app */;
+			productReference = 679717A52CCED0D70086A087 /* FootballDataApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -317,6 +332,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		679717B22CCED5E20086A087 /* RootFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RootFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6797174B2CCECC010086A087 /* Project object */;
 }
