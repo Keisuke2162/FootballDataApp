@@ -18,8 +18,63 @@ let package = Package(
       .target(
         name: "RootFeature",
         dependencies: [
+          "HomeFeature",
           .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
         ]
       ),
+      .target(
+        name: "API",
+        dependencies: [
+          "Entities",
+          .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+        ]
+      ),
+      .target(
+        name: "Entities",
+        dependencies: [
+        ]
+      ),
+      .target(
+        name: "Extensions",
+        dependencies: [
+          .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+        ]
+      ),
+      .target(
+        name: "FixtureFeature",
+        dependencies: [
+          "API",
+          "Entities",
+          "Extensions",
+          .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+        ]
+      ),
+      .target(
+        name: "HomeFeature",
+        dependencies: [
+          "API",
+          "Entities",
+          "Extensions",
+          .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+        ]
+      ),
+      .target(
+        name: "StandingFeature",
+        dependencies: [
+          "API",
+          "Entities",
+          "Extensions",
+          .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+        ]
+      ),
+      .target(
+        name: "StatFeature",
+        dependencies: [
+          "API",
+          "Entities",
+          "Extensions",
+          .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+        ]
+      )
     ]
 )

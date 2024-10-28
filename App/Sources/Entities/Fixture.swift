@@ -5,6 +5,7 @@
 //  Created by Kei on 2023/10/09.
 //
 
+import Extensions
 import Foundation
 
 struct FixturesItem: Codable {

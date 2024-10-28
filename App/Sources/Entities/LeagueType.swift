@@ -16,7 +16,7 @@ enum LeagueType: CaseIterable, Identifiable, Equatable {
 }
 
 extension LeagueType {
-    var id: String {
+    public var id: String {
         switch self {
         case .england:
             "39"
@@ -29,7 +29,7 @@ extension LeagueType {
         }
     }
 
-    var name: String {
+  public var name: String {
         switch self {
         case .england:
             "Premier League"
@@ -42,7 +42,7 @@ extension LeagueType {
         }
     }
 
-    var themaColor: Color {
+  public var themaColor: Color {
         switch self {
         case .england:
             Color.init("background-premier")
@@ -55,7 +55,7 @@ extension LeagueType {
         }
     }
 
-    var standingResource: String {
+  public var standingResource: String {
         switch self {
         case .england:
             "football_api_standings_2023_39"
@@ -68,7 +68,7 @@ extension LeagueType {
         }
     }
 
-    var fixturesResource: String {
+  public var fixturesResource: String {
         switch self {
         case .england:
             "foorball_api_fixtures_2023_39"
@@ -81,7 +81,7 @@ extension LeagueType {
         }
     }
 
-    var topScorerResource: String {
+  public var topScorerResource: String {
         switch self {
         case .england:
             "foorball_api_topscorer_2023_39"
@@ -94,7 +94,7 @@ extension LeagueType {
         }
     }
 
-    var topAssistResource: String {
+  public var topAssistResource: String {
         switch self {
         case .england:
             "foorball_api_topassists_2023_39"
@@ -107,7 +107,7 @@ extension LeagueType {
         }
     }
 
-    var iconImage: Image {
+  public var iconImage: Image {
         switch self {
         case .england:
             Image("ic-england")

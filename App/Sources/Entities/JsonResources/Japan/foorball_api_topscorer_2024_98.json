@@ -1,0 +1,1915 @@
+{
+    "get": "players/topscorers",
+    "parameters": {
+        "league": "98",
+        "season": "2024"
+    },
+    "errors": [],
+    "results": 20,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
+    "response": [
+        {
+            "player": {
+                "id": 41218,
+                "name": "Thiago Santana",
+                "firstname": "Thiago",
+                "lastname": "Santos Santana",
+                "age": 31,
+                "birth": {
+                    "date": "1993-02-04",
+                    "place": "Serrinha",
+                    "country": "Brazil"
+                },
+                "nationality": "Brazil",
+                "height": "184 cm",
+                "weight": "80 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/41218.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 287,
+                        "name": "Urawa",
+                        "logo": "https://media.api-sports.io/football/teams/287.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 90,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 44054,
+                "name": "T. Shiotani",
+                "firstname": "Tsukasa",
+                "lastname": "Shiotani",
+                "age": 36,
+                "birth": {
+                    "date": "1988-12-05",
+                    "place": "Tokushima",
+                    "country": "Japan"
+                },
+                "nationality": "Japan",
+                "height": "180 cm",
+                "weight": "82 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/44054.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 282,
+                        "name": "Sanfrecce Hiroshima",
+                        "logo": "https://media.api-sports.io/football/teams/282.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 90,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 199792,
+                "name": "M. Kato",
+                "firstname": "Mutsuki",
+                "lastname": "Kato",
+                "age": 27,
+                "birth": {
+                    "date": "1997-08-06",
+                    "place": "Saitama",
+                    "country": "Japan"
+                },
+                "nationality": "Japan",
+                "height": "178 cm",
+                "weight": "69 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/199792.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 282,
+                        "name": "Sanfrecce Hiroshima",
+                        "logo": "https://media.api-sports.io/football/teams/282.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 90,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 33643,
+                "name": "R. Watanabe",
+                "firstname": "Ryoma",
+                "lastname": "Watanabe",
+                "age": 28,
+                "birth": {
+                    "date": "1996-10-02",
+                    "place": "Saitama",
+                    "country": "Japan"
+                },
+                "nationality": "Japan",
+                "height": "176 cm",
+                "weight": "70 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/33643.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 287,
+                        "name": "Urawa",
+                        "logo": "https://media.api-sports.io/football/teams/287.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 90,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 309778,
+                "name": "M. Mitsuta",
+                "firstname": "Makoto",
+                "lastname": "Mitsuta",
+                "age": 25,
+                "birth": {
+                    "date": "1999-07-20",
+                    "place": "Kumamoto",
+                    "country": "Japan"
+                },
+                "nationality": "Japan",
+                "height": "170 cm",
+                "weight": "60 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/309778.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 282,
+                        "name": "Sanfrecce Hiroshima",
+                        "logo": "https://media.api-sports.io/football/teams/282.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 90,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 57169,
+                "name": "M. Høibråten",
+                "firstname": "Marius Christopher",
+                "lastname": "Høibråten",
+                "age": 29,
+                "birth": {
+                    "date": "1995-01-23",
+                    "place": "Oslo",
+                    "country": "Norway"
+                },
+                "nationality": "Norway",
+                "height": "184 cm",
+                "weight": "77 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/57169.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 287,
+                        "name": "Urawa",
+                        "logo": "https://media.api-sports.io/football/teams/287.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 90,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 33034,
+                "name": "K. Osako",
+                "firstname": "Keisuke",
+                "lastname": "Osako",
+                "age": 25,
+                "birth": {
+                    "date": "1999-07-28",
+                    "place": "Kagoshima",
+                    "country": "Japan"
+                },
+                "nationality": "Japan",
+                "height": "186 cm",
+                "weight": "86 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/33034.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 282,
+                        "name": "Sanfrecce Hiroshima",
+                        "logo": "https://media.api-sports.io/football/teams/282.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 90,
+                        "number": null,
+                        "position": "Goalkeeper",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 2595,
+                "name": "S. Sasaki",
+                "firstname": "Sho",
+                "lastname": "Sasaki",
+                "age": 35,
+                "birth": {
+                    "date": "1989-10-02",
+                    "place": "Zama",
+                    "country": "Japan"
+                },
+                "nationality": "Japan",
+                "height": "177 cm",
+                "weight": "70 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/2595.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 282,
+                        "name": "Sanfrecce Hiroshima",
+                        "logo": "https://media.api-sports.io/football/teams/282.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 90,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 15795,
+                "name": "A. Scholz",
+                "firstname": "Alexander",
+                "lastname": "Scholz",
+                "age": 32,
+                "birth": {
+                    "date": "1992-10-24",
+                    "place": "København",
+                    "country": "Denmark"
+                },
+                "nationality": "Denmark",
+                "height": "189 cm",
+                "weight": "84 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/15795.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 287,
+                        "name": "Urawa",
+                        "logo": "https://media.api-sports.io/football/teams/287.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 90,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 1907,
+                "name": "H. Sakai",
+                "firstname": "Hiroki",
+                "lastname": "Sakai",
+                "age": 34,
+                "birth": {
+                    "date": "1990-04-12",
+                    "place": "Kashiwa",
+                    "country": "Japan"
+                },
+                "nationality": "Japan",
+                "height": "185 cm",
+                "weight": "78 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/1907.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 287,
+                        "name": "Urawa",
+                        "logo": "https://media.api-sports.io/football/teams/287.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 90,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 33910,
+                "name": "T. Kawamura",
+                "firstname": "Takumu",
+                "lastname": "Kawamura",
+                "age": 25,
+                "birth": {
+                    "date": "1999-08-28",
+                    "place": "Hiroshima",
+                    "country": "Japan"
+                },
+                "nationality": "Japan",
+                "height": "183 cm",
+                "weight": "72 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/33910.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 282,
+                        "name": "Sanfrecce Hiroshima",
+                        "logo": "https://media.api-sports.io/football/teams/282.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 90,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30931,
+                "name": "S. Gustafson",
+                "firstname": "Samuel",
+                "lastname": "Gustafson",
+                "age": 29,
+                "birth": {
+                    "date": "1995-01-11",
+                    "place": "Mölndal",
+                    "country": "Sweden"
+                },
+                "nationality": "Sweden",
+                "height": "186 cm",
+                "weight": "80 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/30931.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 287,
+                        "name": "Urawa",
+                        "logo": "https://media.api-sports.io/football/teams/287.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 90,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 33147,
+                "name": "Y. Ohashi",
+                "firstname": "Yuki",
+                "lastname": "Ohashi",
+                "age": 28,
+                "birth": {
+                    "date": "1996-07-27",
+                    "place": "Matsudo",
+                    "country": "Japan"
+                },
+                "nationality": "Japan",
+                "height": "180 cm",
+                "weight": "73 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/33147.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 282,
+                        "name": "Sanfrecce Hiroshima",
+                        "logo": "https://media.api-sports.io/football/teams/282.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 90,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 1303,
+                "name": "P. Sotiriou",
+                "firstname": "Pieros",
+                "lastname": "Sotiriou",
+                "age": 31,
+                "birth": {
+                    "date": "1993-01-13",
+                    "place": "Nikosia",
+                    "country": "Cyprus"
+                },
+                "nationality": "Cyprus",
+                "height": "186 cm",
+                "weight": "81 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/1303.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 282,
+                        "name": "Sanfrecce Hiroshima",
+                        "logo": "https://media.api-sports.io/football/teams/282.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 90,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 288949,
+                "name": "K. Sakakibara",
+                "firstname": "Keigo",
+                "lastname": "Sakakibara",
+                "age": 24,
+                "birth": {
+                    "date": "2000-10-09",
+                    "place": "Saitama",
+                    "country": "Japan"
+                },
+                "nationality": "Japan",
+                "height": "167 cm",
+                "weight": null,
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/288949.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 296,
+                        "name": "Yokohama F. Marinos",
+                        "logo": "https://media.api-sports.io/football/teams/296.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 0,
+                        "lineups": 0,
+                        "minutes": 0,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 381678,
+                "name": "Y. Horiuchi",
+                "firstname": "Yota",
+                "lastname": "Horiuchi",
+                "age": 20,
+                "birth": {
+                    "date": "2004-07-08",
+                    "place": null,
+                    "country": "Japan"
+                },
+                "nationality": "Japan",
+                "height": "171 cm",
+                "weight": "66 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/381678.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 287,
+                        "name": "Urawa",
+                        "logo": "https://media.api-sports.io/football/teams/287.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 0,
+                        "lineups": 0,
+                        "minutes": 0,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 33175,
+                "name": "K. Mizunuma",
+                "firstname": "Kota",
+                "lastname": "Mizunuma",
+                "age": 34,
+                "birth": {
+                    "date": "1990-02-22",
+                    "place": "Yokohama",
+                    "country": "Japan"
+                },
+                "nationality": "Japan",
+                "height": "176 cm",
+                "weight": "72 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/33175.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 296,
+                        "name": "Yokohama F. Marinos",
+                        "logo": "https://media.api-sports.io/football/teams/296.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 0,
+                        "lineups": 0,
+                        "minutes": 0,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 96733,
+                "name": "Nam Tae-Hee",
+                "firstname": "Tae-Hee",
+                "lastname": "Nam",
+                "age": 33,
+                "birth": {
+                    "date": "1991-07-03",
+                    "place": "Busan",
+                    "country": "Korea Republic"
+                },
+                "nationality": "Korea Republic",
+                "height": "174 cm",
+                "weight": "72 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/96733.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 296,
+                        "name": "Yokohama F. Marinos",
+                        "logo": "https://media.api-sports.io/football/teams/296.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 0,
+                        "lineups": 0,
+                        "minutes": 0,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 33376,
+                "name": "K. Yoshio",
+                "firstname": "Kaina",
+                "lastname": "Yoshio",
+                "age": 26,
+                "birth": {
+                    "date": "1998-06-28",
+                    "place": "Kobe",
+                    "country": "Japan"
+                },
+                "nationality": "Japan",
+                "height": "169 cm",
+                "weight": "66 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/33376.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 296,
+                        "name": "Yokohama F. Marinos",
+                        "logo": "https://media.api-sports.io/football/teams/296.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 0,
+                        "lineups": 0,
+                        "minutes": 0,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 24939,
+                "name": "R. Miyaichi",
+                "firstname": "Ryo",
+                "lastname": "Miyaichi",
+                "age": 32,
+                "birth": {
+                    "date": "1992-12-14",
+                    "place": "Okazaki",
+                    "country": "Japan"
+                },
+                "nationality": "Japan",
+                "height": "183 cm",
+                "weight": "78 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/24939.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 296,
+                        "name": "Yokohama F. Marinos",
+                        "logo": "https://media.api-sports.io/football/teams/296.png"
+                    },
+                    "league": {
+                        "id": 98,
+                        "name": "J1 League",
+                        "country": "Japan",
+                        "logo": "https://media.api-sports.io/football/leagues/98.png",
+                        "flag": "https://media.api-sports.io/flags/jp.svg",
+                        "season": 2024
+                    },
+                    "games": {
+                        "appearences": 0,
+                        "lineups": 0,
+                        "minutes": 0,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        }
+    ]
+}

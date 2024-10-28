@@ -6,6 +6,7 @@
 //
 
 import ComposableArchitecture
+import Entities
 import SwiftUI
 
 struct SelectLeagueView: View {

@@ -5,6 +5,8 @@
 //  Created by Kei on 2024/10/28.
 //
 
+import ComposableArchitecture
+import HomeFeature
 import SwiftUI
 
 public struct RootView: View {
@@ -12,7 +14,9 @@ public struct RootView: View {
   }
 
   public var body: some View {
-    Text("Root")
+    HomeView(store: Store(initialState: HomeReducer.State(), reducer: {
+        HomeReducer()
+    }))
   }
 }
 
