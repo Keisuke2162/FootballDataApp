@@ -1,0 +1,92 @@
+{
+    "get": "fixtures/statistics",
+    "parameters": {
+        "fixture": "1153775",
+        "team": "287"
+    },
+    "errors": [],
+    "results": 1,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
+    "response": [
+        {
+            "team": {
+                "id": 287,
+                "name": "Urawa",
+                "logo": "https://media.api-sports.io/football/teams/287.png"
+            },
+            "statistics": [
+                {
+                    "type": "Shots on Goal",
+                    "value": 4
+                },
+                {
+                    "type": "Shots off Goal",
+                    "value": 7
+                },
+                {
+                    "type": "Total Shots",
+                    "value": 17
+                },
+                {
+                    "type": "Blocked Shots",
+                    "value": 6
+                },
+                {
+                    "type": "Shots insidebox",
+                    "value": 16
+                },
+                {
+                    "type": "Shots outsidebox",
+                    "value": 1
+                },
+                {
+                    "type": "Fouls",
+                    "value": 9
+                },
+                {
+                    "type": "Corner Kicks",
+                    "value": 5
+                },
+                {
+                    "type": "Offsides",
+                    "value": 0
+                },
+                {
+                    "type": "Ball Possession",
+                    "value": "57%"
+                },
+                {
+                    "type": "Yellow Cards",
+                    "value": 1
+                },
+                {
+                    "type": "Red Cards",
+                    "value": null
+                },
+                {
+                    "type": "Goalkeeper Saves",
+                    "value": 9
+                },
+                {
+                    "type": "Total passes",
+                    "value": 513
+                },
+                {
+                    "type": "Passes accurate",
+                    "value": 394
+                },
+                {
+                    "type": "Passes %",
+                    "value": "77%"
+                },
+                {
+                    "type": "expected_goals",
+                    "value": "1.53"
+                }
+            ]
+        }
+    ]
+}
