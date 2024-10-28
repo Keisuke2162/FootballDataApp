@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum StatType: CaseIterable, Equatable {
+public enum StatType: CaseIterable, Equatable, Sendable {
     case topScorers
     case topAssists
 
-    var title: String {
+  public var title: String {
         switch self {
         case .topScorers:
             "Top Scorers"
@@ -21,37 +21,37 @@ enum StatType: CaseIterable, Equatable {
     }
 }
 
-struct PlayerStatsItem: Codable {
-    let response: [PlayerStats]
+public struct PlayerStatsItem: Codable {
+  public let response: [PlayerStats]
 }
 
-struct PlayerStats: Codable, Equatable, Identifiable, Sendable {
-    static func == (lhs: PlayerStats, rhs: PlayerStats) -> Bool {
+public struct PlayerStats: Codable, Equatable, Identifiable, Sendable {
+  public static func == (lhs: PlayerStats, rhs: PlayerStats) -> Bool {
         lhs.id == rhs.id
     }
 
-    var id: Int {
+  public var id: Int {
         player.id
     }
-    let player: Player
-    let statistics: [Statistics]
+  public let player: Player
+  public let statistics: [Statistics]
 }
 
-struct Player: Codable {
-    let id: Int
-    let name: String
-    let imageURL: URL?
+public struct Player: Codable, Sendable {
+  public let id: Int
+  public let name: String
+  public let imageURL: URL?
 }
 
-struct Statistics: Codable, Identifiable, Sendable {
-    var id: Int {
+public struct Statistics: Codable, Identifiable, Sendable {
+  public var id: Int {
         team.id
     }
-    let team: Team
-    let goals: Goals
+  public let team: Team
+  public let goals: Goals
 }
 
-struct Goals: Codable {
-    let total: Int?
-    let assists: Int?
+public struct Goals: Codable, Sendable {
+  public let total: Int?
+  public let assists: Int?
 }

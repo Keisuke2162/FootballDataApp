@@ -5,18 +5,20 @@
 //  Created by Kei on 2024/02/21.
 //
 
-import ComposableArchitecture
 import Entities
+import Dependencies
+import DependenciesMacros
+import XCTestDynamicOverlay
 import Foundation
 
 @DependencyClient
-struct StatsAPIClient {
-    var getTopScorers: @Sendable (_ type: LeagueType) async throws -> [PlayerStats]
-    var getTopAssists: @Sendable (_ type: LeagueType) async throws -> [PlayerStats]
+public struct StatsAPIClient : Sendable {
+    public var getTopScorers: @Sendable (_ type: LeagueType) async throws -> [PlayerStats]
+    public var getTopAssists: @Sendable (_ type: LeagueType) async throws -> [PlayerStats]
 }
 
 extension StatsAPIClient: TestDependencyKey {
-    static let previewValue = Self(
+    public static let previewValue = Self(
         getTopScorers: { type in
             do {
                 return try await liveValue.getTopScorers(type)
@@ -28,18 +30,18 @@ extension StatsAPIClient: TestDependencyKey {
             } catch { return .init([]) }
         }
     )
-    static let testValue: StatsAPIClient = Self()
+    public static let testValue: StatsAPIClient = Self()
 }
 
 extension DependencyValues {
-    var statsAPIClient: StatsAPIClient {
+    public var statsAPIClient: StatsAPIClient {
         get { self[StatsAPIClient.self] }
         set { self[StatsAPIClient.self] = newValue }
     }
 }
 
 extension StatsAPIClient: DependencyKey {
-    static let liveValue: StatsAPIClient = StatsAPIClient(
+    public static let liveValue: StatsAPIClient = StatsAPIClient(
         getTopScorers: { type in
             var components = URLComponents(string: "https://v3.football.api-sports.io/fixtures")!
             components.queryItems = [

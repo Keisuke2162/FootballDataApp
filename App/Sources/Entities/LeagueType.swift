@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum LeagueType: CaseIterable, Identifiable, Equatable {
+public enum LeagueType: CaseIterable, Identifiable, Equatable, Sendable {
     case england
     case italy
     case spain
