@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum APIError: Error {
+public enum APIError: Error {
     case invalidURL
     case networkError
     case noneValue
     case unknown
 
-    var title: String {
+    public var title: String {
         switch self {
         case .noneValue:
             return "noneValue"

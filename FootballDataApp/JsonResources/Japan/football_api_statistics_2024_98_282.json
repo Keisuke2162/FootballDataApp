@@ -1,0 +1,92 @@
+{
+    "get": "fixtures/statistics",
+    "parameters": {
+        "fixture": "1153775",
+        "team": "282"
+    },
+    "errors": [],
+    "results": 1,
+    "paging": {
+        "current": 1,
+        "total": 1
+    },
+    "response": [
+        {
+            "team": {
+                "id": 282,
+                "name": "Sanfrecce Hiroshima",
+                "logo": "https://media.api-sports.io/football/teams/282.png"
+            },
+            "statistics": [
+                {
+                    "type": "Shots on Goal",
+                    "value": 11
+                },
+                {
+                    "type": "Shots off Goal",
+                    "value": 12
+                },
+                {
+                    "type": "Total Shots",
+                    "value": 27
+                },
+                {
+                    "type": "Blocked Shots",
+                    "value": 4
+                },
+                {
+                    "type": "Shots insidebox",
+                    "value": 14
+                },
+                {
+                    "type": "Shots outsidebox",
+                    "value": 13
+                },
+                {
+                    "type": "Fouls",
+                    "value": 15
+                },
+                {
+                    "type": "Corner Kicks",
+                    "value": 9
+                },
+                {
+                    "type": "Offsides",
+                    "value": 1
+                },
+                {
+                    "type": "Ball Possession",
+                    "value": "43%"
+                },
+                {
+                    "type": "Yellow Cards",
+                    "value": 2
+                },
+                {
+                    "type": "Red Cards",
+                    "value": null
+                },
+                {
+                    "type": "Goalkeeper Saves",
+                    "value": 4
+                },
+                {
+                    "type": "Total passes",
+                    "value": 372
+                },
+                {
+                    "type": "Passes accurate",
+                    "value": 274
+                },
+                {
+                    "type": "Passes %",
+                    "value": "74%"
+                },
+                {
+                    "type": "expected_goals",
+                    "value": "3.54"
+                }
+            ]
+        }
+    ]
+}

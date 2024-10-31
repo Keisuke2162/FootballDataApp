@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Team: Codable {
-    let id: Int
-    let name: String
-    let logo: String
+public struct Team: Codable, Sendable {
+  public let id: Int
+  public let name: String
+  public let logo: String
 }
