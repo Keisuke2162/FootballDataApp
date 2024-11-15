@@ -18,10 +18,10 @@ public struct HomeReducer {
   @ObservableState
   public struct State: Equatable {
     @Presents var destination: Destination.State?
-    public var selectedLeagueType: LeagueType = .england
-    public var standingList = StandingReducer.State(leagueType: .england)
-    public var fixtureSchedule = FixturesReducer.State(leagueType: .england)
-    public var statsList = StatsContainerReducer.State(leagueType: .england)
+    public var selectedLeagueType: LeagueType = .japan
+    public var standingList = StandingReducer.State(leagueType: .japan)
+    public var fixtureSchedule = FixturesReducer.State(leagueType: .japan)
+    public var statsList = StatsContainerReducer.State(leagueType: .japan)
     
     public init() {
     }

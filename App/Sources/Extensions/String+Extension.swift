@@ -8,8 +8,8 @@
 import Foundation
 
 extension String {
-    public func toDate() -> Date? {
-        let dateFormatter = ISO8601DateFormatter()
-        return dateFormatter.date(from: self)
-    }
+  public func toDate() -> Date? {
+    let dateFormatter = ISO8601DateFormatter()
+    return dateFormatter.date(from: self)
+  }
 }

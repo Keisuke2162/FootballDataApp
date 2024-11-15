@@ -13,11 +13,6 @@ import SwiftUI
 
 @Reducer
 public struct FixturesReducer : Sendable{
-  //    @Reducer(state: .equatable)
-  //    enum Path {
-  //        case detail(FixtureDetailReducer)
-  //    }
-  
   @ObservableState
   public struct State: Equatable {
     let leagueType: LeagueType
@@ -83,6 +78,7 @@ public struct FixturesReducer : Sendable{
 
 public struct FixturesView: View {
   @Bindable var store: StoreOf<FixturesReducer>
+  @Namespace private var namespace
   
   public init(store: StoreOf<FixturesReducer>) {
     self.store = store
@@ -90,78 +86,53 @@ public struct FixturesView: View {
   
   public var body: some View {
     NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
-      VStack {
+      VStack(spacing: .zero) {
         if store.state.fixtures.isEmpty {
           Color.clear
         } else {
+          // MEMO: header部分component化しても良さそう
           HStack {
             Spacer()
             Button {
               store.send(.backDateButton)
             } label: {
-              Text("←")
-                .foregroundColor(Color.init("SkySportsBlue"))
-                .font(.custom("SSportsD-Medium", size: 16))
+              Image(systemName: "chevron.left")
+                .foregroundColor(Color.white)
             }
             Spacer()
             Text(store.state.dateKeys.isEmpty ? "" : store.state.dateKeys[store.selectedDateIndex])
-              .foregroundColor(Color.init("SkySportsBlue"))
-              .font(.custom("SSportsD-Medium", size: 16))
+              .foregroundColor(Color.white)
+              .font(.headline)
+              .padding(.vertical, 16)
             Spacer()
             Button {
               store.send(.forwardDateButton)
             } label: {
-              Text("→")
-                .foregroundColor(store.state.leagueType.themaColor)
-                .font(.custom("SSportsD-Medium", size: 16))
+              Image(systemName: "chevron.right")
+                .foregroundColor(Color.white)
             }
             Spacer()
           }
-          .frame(height: 32)
-          .background(Color.white)
-          List {
-            ForEach(store.groupedItems[store.dateKeys[store.selectedDateIndex]] ?? []) { item in
-              NavigationLink(state: FixtureDetailReducer.State(leagueType: store.state.leagueType, fixture: item)) {
-                HStack {
-                  Spacer()
-                  KFImage(URL(string: item.teams.home.logo))
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40, height: 40)
-                  Spacer()
-                  Text(item.goals.home?.description ?? "")
-                    .foregroundColor(Color.white)
-                    .font(.custom("SSportsD-Medium", size: 16))
-                  Text("-")
-                    .foregroundColor(Color.white)
-                    .font(.custom("SSportsD-Medium", size: 16))
-                  Text(item.goals.away?.description ?? "")
-                    .foregroundColor(Color.white)
-                    .font(.custom("SSportsD-Medium", size: 16))
-                  Spacer()
-                  KFImage(URL(string: item.teams.away.logo))
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40, height: 40)
-                  Spacer()
-                }
-              }
-              .frame(height: 56)
-              .listRowBackground(Color.clear)
-            }
-            Spacer().frame(height: 50).listRowBackground(EmptyView())
-          }
-          .scrollContentBackground(.hidden)
           .background(store.state.leagueType.themaColor)
-          .listStyle(.grouped)
+          
+          ScrollView {
+            VStack(spacing: 16) {
+              Spacer().frame(height: 16)
+              ForEach(store.groupedItems[store.dateKeys[store.selectedDateIndex]] ?? []) { item in
+                NavigationLink(state: FixtureDetailReducer.State(leagueType: store.state.leagueType, fixture: item)) {
+                  FixturesListCell(fixture: item)
+                }
+                .padding(.horizontal, 24)
+              }
+              Spacer().frame(height: 64)
+            }
+          }
+          .background(store.state.leagueType.themaColor)
+          Spacer()
         }
       }
     } destination: { store in
       FixtureDetailView(store: store)
-      //            switch store.case {
-      //            case let .detail(store):
-      //                FixtureDetailView(store: store)
-      //            }
     }
     .task {
       do {
@@ -170,4 +141,17 @@ public struct FixturesView: View {
       } catch {}
     }
   }
+}
+struct HideDisclosureIndicator: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .buttonStyle(PlainButtonStyle())
+            .padding(.trailing, 8)
+    }
+}
+
+extension View {
+    func hideDisclosureIndicator() -> some View {
+        modifier(HideDisclosureIndicator())
+    }
 }

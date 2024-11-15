@@ -73,34 +73,26 @@ public struct FixtureDetailView: View {
   }
   
   public var body: some View {
-    ZStack {
-      VStack(spacing: 16) {
+    VStack(spacing: 16) {
+      // ヘッダー
+      HStack {
+        Button(action: {
+          dismiss()
+        }, label: {
+          Image(systemName: "chevron.left")
+            .foregroundColor(Color.white)
+        })
+        Spacer()
+      }
+      .padding(EdgeInsets(top: 16, leading: 24, bottom: 16, trailing: 0))
+      
+      ScrollView {
         // スコア表示領域
-        HStack {
-          Spacer()
-          KFImage(URL(string: store.state.fixture.teams.home.logo))
-            .resizable()
-            .scaledToFit()
-            .frame(width: 56, height: 56)
-          Spacer()
-          Text(store.state.fixture.goals.home?.description ?? "")
-            .foregroundColor(Color.white)
-            .font(.custom("SSportsD-Medium", size: 24))
-          Text("-")
-            .foregroundColor(Color.white)
-            .font(.custom("SSportsD-Medium", size: 24))
-          Text(store.state.fixture.goals.away?.description ?? "")
-            .foregroundColor(Color.white)
-            .font(.custom("SSportsD-Medium", size: 24))
-          Spacer()
-          KFImage(URL(string: store.state.fixture.teams.away.logo))
-            .resizable()
-            .scaledToFit()
-            .frame(width: 56, height: 56)
-          Spacer()
-        }
-        .frame(height: 160)
-        .background(store.state.leagueType.themaColor)
+        FixturesListCell(fixture: store.state.fixture)
+          .padding(.horizontal, 24)
+        
+        Spacer().frame(height: 32)
+        
         // 得点者
         
         // スタッツ表示領域
@@ -129,24 +121,6 @@ public struct FixtureDetailView: View {
         
         
         
-        Spacer()
-      }
-      VStack {
-        HStack {
-          Button(action: {
-            dismiss()
-          }, label: {
-            Text("←")
-              .foregroundColor(Color.black)
-              .padding(EdgeInsets(top: 4, leading: 8, bottom: 8, trailing: 8))
-              .font(.custom("SSportsD-Medium", size: 24))
-              .frame(width: 40, height: 40)
-              .background(Color.white)
-              .clipShape(RoundedRectangle(cornerRadius: 10))
-          })
-          Spacer()
-        }
-        .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 0))
         Spacer()
       }
     }
