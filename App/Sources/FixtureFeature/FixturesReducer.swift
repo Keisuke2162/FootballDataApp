@@ -78,7 +78,6 @@ public struct FixturesReducer : Sendable{
 
 public struct FixturesView: View {
   @Bindable var store: StoreOf<FixturesReducer>
-  @Namespace private var namespace
   
   public init(store: StoreOf<FixturesReducer>) {
     self.store = store
