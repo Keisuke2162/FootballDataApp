@@ -65,28 +65,6 @@ public struct StandingView: View {
   public var body: some View {
     NavigationStack {
       VStack(spacing: .zero) {
-//        HStack(spacing: 8) {
-//          Spacer().frame(width: 16)
-//          Text("Pos")
-//            .font(.custom("SSportsD-Medium", size: 12))
-//            .frame(width: 24)
-//          Text("Club")
-//            .font(.custom("SSportsD-Medium", size: 12))
-//            .frame(width: 32)
-//            .padding(.leading, 46)
-//          Spacer()
-//          Text("P")
-//            .font(.custom("SSportsD-Medium", size: 12))
-//            .frame(width: 24)
-//          Text("GD")
-//            .font(.custom("SSportsD-Medium", size: 12))
-//            .frame(width: 24)
-//          Text("Pts")
-//            .font(.custom("SSportsD-Medium", size: 12))
-//            .frame(width: 24)
-//          Spacer().frame(width: 16)
-//        }
-//        .frame(height: 32)
         HStack(spacing: 16) {
           Spacer()
           Text("Played")
@@ -107,6 +85,8 @@ public struct StandingView: View {
               .listRowBackground(Color.clear)
           }
           .listRowSeparator(.hidden)
+          Spacer().frame(height: 120).listRowBackground(EmptyView())
+            .listRowSeparator(.hidden)
         }
         .scrollContentBackground(.hidden)
         .listStyle(.plain)

@@ -8,17 +8,17 @@
 import Foundation
 
 public enum StatType: CaseIterable, Equatable, Sendable {
-    case topScorers
-    case topAssists
-
+  case topScorers
+  case topAssists
+  
   public var title: String {
-        switch self {
-        case .topScorers:
-            "Top Scorers"
-        case .topAssists:
-            "Top Assists"
-        }
+    switch self {
+    case .topScorers:
+      "Top Scorers"
+    case .topAssists:
+      "Top Assists"
     }
+  }
 }
 
 public struct PlayerStatsItem: Codable {
@@ -27,12 +27,12 @@ public struct PlayerStatsItem: Codable {
 
 public struct PlayerStats: Codable, Equatable, Identifiable, Sendable {
   public static func == (lhs: PlayerStats, rhs: PlayerStats) -> Bool {
-        lhs.id == rhs.id
-    }
-
+    lhs.id == rhs.id
+  }
+  
   public var id: Int {
-        player.id
-    }
+    player.id
+  }
   public let player: Player
   public let statistics: [Statistics]
 }
@@ -45,8 +45,8 @@ public struct Player: Codable, Sendable {
 
 public struct Statistics: Codable, Identifiable, Sendable {
   public var id: Int {
-        team.id
-    }
+    team.id
+  }
   public let team: Team
   public let goals: Goals
 }

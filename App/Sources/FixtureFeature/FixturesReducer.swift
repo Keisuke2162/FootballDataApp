@@ -123,13 +123,12 @@ public struct FixturesView: View {
                 }
                 .padding(.horizontal, 24)
               }
-              Spacer().frame(height: 80)
+              Spacer().frame(height: 120)
             }
           }
-          .background(store.state.leagueType.themaColor)
-          Spacer()
         }
       }
+      .background(store.state.leagueType.themaColor)
     } destination: { store in
       FixtureDetailView(store: store)
     }

@@ -81,7 +81,7 @@ public struct StatsContainerView: View {
               VStack {
                 Text(type.title)
                   .foregroundColor(store.state.selectedStatsType == type ? Color.white : Color.gray)
-                  .font(.custom("SSportsD-Medium", size: 12))
+                  .font(.headline)
                 Rectangle()
                   .fill(store.state.selectedStatsType == type ? Color.white : Color.clear)
                   .frame(height: 4)
@@ -89,6 +89,7 @@ public struct StatsContainerView: View {
             })
           }
         }
+        .frame(height: 32)
         TabView(selection: $store.selectedStatsType.sending(\.selectedType)) {
           PlayerStatsView(store: self.store.scope(state: \.topScorerList, action: \.topScorerList))
             .tag(StatType.topScorers)
