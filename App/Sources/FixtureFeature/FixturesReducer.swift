@@ -123,7 +123,7 @@ public struct FixturesView: View {
                 }
                 .padding(.horizontal, 24)
               }
-              Spacer().frame(height: 64)
+              Spacer().frame(height: 80)
             }
           }
           .background(store.state.leagueType.themaColor)
