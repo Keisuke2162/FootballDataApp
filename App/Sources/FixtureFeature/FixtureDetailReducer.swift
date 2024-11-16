@@ -97,38 +97,38 @@ public struct FixtureDetailView: View {
         
         // スタッツ表示領域(statsTypeのenumで表示分けれるようにしたい)
         if let homeFixtureDetail = store.state.fixtureDetailHome, let awayFixtureDetail = store.state.fixtureDetailAway {
-          VStack(spacing: 32) {
+          VStack(spacing: 48) {
             // 総シュート
             FixtureDetailStatsCell(
               statsType: .totalShots,
               homeValue: homeFixtureDetail.totalShots,
               awayValue: awayFixtureDetail.totalShots,
-              home: homeFixtureDetail.team,
-              away: awayFixtureDetail.team
+              home: store.state.fixture.teams.home,
+              away: store.state.fixture.teams.away
             )
             // 枠内シュート
             FixtureDetailStatsCell(
               statsType: .shotsOnGoal,
               homeValue: homeFixtureDetail.shotsOnGoal,
               awayValue: awayFixtureDetail.shotsOnGoal,
-              home: homeFixtureDetail.team,
-              away: awayFixtureDetail.team
+              home: store.state.fixture.teams.home,
+              away: store.state.fixture.teams.away
             )
             // ポゼッション
             FixtureDetailStatsCell(
               statsType: .ballPossession,
               homeValue: homeFixtureDetail.ballPossession,
               awayValue: awayFixtureDetail.ballPossession,
-              home: homeFixtureDetail.team,
-              away: awayFixtureDetail.team
+              home: store.state.fixture.teams.home,
+              away: store.state.fixture.teams.away
             )
             // xG
             FixtureDetailStatsCell(
               statsType: .expectedGoals,
               homeValue: homeFixtureDetail.expectedGoals,
               awayValue: awayFixtureDetail.expectedGoals,
-              home: homeFixtureDetail.team,
-              away: awayFixtureDetail.team
+              home: store.state.fixture.teams.home,
+              away: store.state.fixture.teams.away
             )
           }
         }

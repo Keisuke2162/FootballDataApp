@@ -42,37 +42,35 @@ public struct FixtureDetailStatsCell: View {
   
   public var body: some View {
     VStack {
-      Text(statsType.rawValue)
-        .foregroundColor(Color.white)
-        .font(.custom("SSportsD-Medium", size: 16))
-      GeometryReader { geometry in
-        HStack {
-          Spacer()
-          Text(homeValue)
-            .foregroundColor(Color.white)
-            .font(.custom("SSportsD-Medium", size: 24))
-          Spacer()
-          Text(awayValue)
-            .foregroundColor(Color.white)
-            .font(.custom("SSportsD-Medium", size: 24))
-          Spacer()
-        }
-        .frame(height: 32)
-        .clipShape(.rect(cornerRadius: 16))
-        .background {
-          HStack(spacing: .zero) {
-            let homeWidth = totalIntValue > 0 ? geometry.size.width * (CGFloat(homeIntValue) / CGFloat(totalIntValue)) : 0
-            let awayWidth = totalIntValue > 0 ? geometry.size.width * (CGFloat(awayIntValue) / CGFloat(totalIntValue)) : 0
-            Color(hexValue: home.theme.mainColorCode)
-              .frame(width: homeWidth)
-            Color(hexValue: away.theme.mainColorCode)
-              .frame(width: awayWidth)
-          }
-          .clipShape(.rect(cornerRadius: 16))
-        }
+      HStack {
+        Spacer()
+        Text(homeValue)
+          .foregroundColor(Color.white)
+          .font(.custom("SSportsD-Medium", size: 24))
+        Spacer()
+        Text(statsType.rawValue)
+          .foregroundColor(Color.white)
+          .font(.custom("SSportsD-Medium", size: 16))
+        Spacer()
+        Text(awayValue)
+          .foregroundColor(Color.white)
+          .font(.custom("SSportsD-Medium", size: 24))
+        Spacer()
       }
-      .padding(.horizontal, 16)
-      .padding(.bottom, 8)
+
+      GeometryReader { geometry in
+        HStack(spacing: .zero) {
+          let homeWidth = totalIntValue > 0 ? geometry.size.width * (CGFloat(homeIntValue) / CGFloat(totalIntValue)) : 0
+          let awayWidth = totalIntValue > 0 ? geometry.size.width * (CGFloat(awayIntValue) / CGFloat(totalIntValue)) : 0
+          Color(hexValue: home.theme.mainColorCode)
+            .frame(width: homeWidth)
+          Color(hexValue: away.theme.mainColorCode)
+            .frame(width: awayWidth)
+        }
+        .clipShape(.rect(cornerRadius: 4))
+        .frame(height: 8)
+      }
+      .padding(.horizontal, 32)
     }
   }
 }
