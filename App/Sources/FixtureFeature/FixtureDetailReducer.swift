@@ -95,25 +95,41 @@ public struct FixtureDetailView: View {
         
         // 得点者
         
-        // スタッツ表示領域
+        // スタッツ表示領域(statsTypeのenumで表示分けれるようにしたい)
         if let homeFixtureDetail = store.state.fixtureDetailHome, let awayFixtureDetail = store.state.fixtureDetailAway {
-          VStack(spacing: 24) {
+          VStack(spacing: 32) {
             // 総シュート
-            FixtureDetailStatsCell(statsType: .totalShots,
-                                   homeValue: homeFixtureDetail.totalShots,
-                                   awayValue: awayFixtureDetail.totalShots)
+            FixtureDetailStatsCell(
+              statsType: .totalShots,
+              homeValue: homeFixtureDetail.totalShots,
+              awayValue: awayFixtureDetail.totalShots,
+              home: homeFixtureDetail.team,
+              away: awayFixtureDetail.team
+            )
             // 枠内シュート
-            FixtureDetailStatsCell(statsType: .shotsOnGoal,
-                                   homeValue: homeFixtureDetail.shotsOnGoal,
-                                   awayValue: awayFixtureDetail.shotsOnGoal)
+            FixtureDetailStatsCell(
+              statsType: .shotsOnGoal,
+              homeValue: homeFixtureDetail.shotsOnGoal,
+              awayValue: awayFixtureDetail.shotsOnGoal,
+              home: homeFixtureDetail.team,
+              away: awayFixtureDetail.team
+            )
             // ポゼッション
-            FixtureDetailStatsCell(statsType: .ballPossession,
-                                   homeValue: homeFixtureDetail.ballPossession,
-                                   awayValue: awayFixtureDetail.ballPossession)
+            FixtureDetailStatsCell(
+              statsType: .ballPossession,
+              homeValue: homeFixtureDetail.ballPossession,
+              awayValue: awayFixtureDetail.ballPossession,
+              home: homeFixtureDetail.team,
+              away: awayFixtureDetail.team
+            )
             // xG
-            FixtureDetailStatsCell(statsType: .expectedGoals,
-                                   homeValue: homeFixtureDetail.expectedGoals,
-                                   awayValue: awayFixtureDetail.expectedGoals)
+            FixtureDetailStatsCell(
+              statsType: .expectedGoals,
+              homeValue: homeFixtureDetail.expectedGoals,
+              awayValue: awayFixtureDetail.expectedGoals,
+              home: homeFixtureDetail.team,
+              away: awayFixtureDetail.team
+            )
           }
         }
         

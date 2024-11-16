@@ -91,9 +91,28 @@ public enum StatisticType: String, Codable, Sendable {
   case expectedGoals = "expected_goals"
 }
 
+//public enum StatisticValue: Codable, Sendable {
+//  case intValue(Int)
+//  case floatValue(Float)
+//  case stringValue(String)
+//  
+//  public init(from decoder: Decoder) throws {
+//    let container = try decoder.singleValueContainer()
+//    if let intValue = try? container.decode(Int.self) {
+//      self = .intValue(intValue)
+//    } else if let floatValue = try? container.decode(Float.self) {
+//      self = .floatValue(floatValue)
+//    } else if let stringValue = try? container.decode(String.self) {
+//      self = .stringValue(stringValue)
+//    } else {
+//      self = .stringValue("-")
+//    }
+//  }
+//}
+
 public struct StatisticValue: Codable, Sendable {
-  public let value: String?
-  
+  public let value: String
+
   public init(from decoder: Decoder) throws {
     let container = try decoder.singleValueContainer()
     if let intValue = try? container.decode(Int.self) {
@@ -101,7 +120,7 @@ public struct StatisticValue: Codable, Sendable {
     } else if let stringValue = try? container.decode(String.self) {
       self.value = stringValue
     } else {
-      self.value = nil
+      self.value = "-"
     }
   }
 }
