@@ -12,6 +12,7 @@ import SwiftUI
 import StandingFeature
 import FixtureFeature
 import StatFeature
+import Utilities
 
 @Reducer
 public struct HomeReducer {
@@ -93,7 +94,8 @@ extension HomeReducer {
 @MainActor
 public struct HomeView: View {
   @Bindable var store: StoreOf<HomeReducer>
-  
+  @AppStorage(.useJSON) var isUseJSON
+
   public init(store: StoreOf<HomeReducer>) {
     self.store = store
     UITabBar.appearance().isHidden = true

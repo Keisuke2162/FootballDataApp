@@ -9,6 +9,7 @@ import ComposableArchitecture
 import Foundation
 import Entities
 import SwiftUI
+import Utilities
 
 @Reducer
 public struct StatsContainerReducer {

@@ -10,6 +10,7 @@ import ComposableArchitecture
 import Entities
 import Kingfisher
 import SwiftUI
+import Utilities
 
 @Reducer
 public struct FixturesReducer : Sendable{
@@ -39,6 +40,8 @@ public struct FixturesReducer : Sendable{
   }
   
   @Dependency(\.fixtureClient) var fixtureClient
+  @AppStorage(.useJSON) var isUseJSON
+
   private enum CancelID { case fixtures }
   
   public var body: some Reducer<State, Action> {
@@ -46,7 +49,7 @@ public struct FixturesReducer : Sendable{
       switch action {
       case .fetchFixtures:
         return .run { [leagueType = state.leagueType] send in
-          await send(.fixturesResponse(Result { try await self.fixtureClient.getFixtures(leagueType) }))
+          await send(.fixturesResponse(Result { try await self.fixtureClient.getFixtures(leagueType, isUseJSON) }))
         }
         .cancellable(id: CancelID.fixtures)
       case .fixturesResponse(.failure):

@@ -13,20 +13,21 @@ import Foundation
 
 @DependencyClient
 public struct StatsAPIClient : Sendable {
-    public var getTopScorers: @Sendable (_ type: LeagueType) async throws -> [PlayerStats]
-    public var getTopAssists: @Sendable (_ type: LeagueType) async throws -> [PlayerStats]
+    public var getTopScorers: @Sendable (_ type: LeagueType, _ isUseJSON: Bool) async throws -> [PlayerStats]
+    public var getTopAssists: @Sendable (_ type: LeagueType, _ isUseJSON: Bool) async throws -> [PlayerStats]
 }
 
+// MEMO: Preview用のテストデータ。多分使ってない
 extension StatsAPIClient: TestDependencyKey {
     public static let previewValue = Self(
-        getTopScorers: { type in
+        getTopScorers: { type, isUseJSON in
             do {
-                return try await liveValue.getTopScorers(type)
+                return try await liveValue.getTopScorers(type, isUseJSON)
             } catch { return .init([]) }
         },
-        getTopAssists: { type in
+        getTopAssists: { type, isUseJSON in
             do {
-                return try await liveValue.getTopAssists(type)
+                return try await liveValue.getTopAssists(type, isUseJSON)
             } catch { return .init([]) }
         }
     )
@@ -42,12 +43,13 @@ extension DependencyValues {
 
 extension StatsAPIClient: DependencyKey {
     public static let liveValue: StatsAPIClient = StatsAPIClient(
-        getTopScorers: { type in
+        getTopScorers: { type, isUseJSON in
             var components = URLComponents(string: "https://v3.football.api-sports.io/fixtures")!
             components.queryItems = [
                 .init(name: "season", value: "2023"),
                 .init(name: "league", value: type.id)
             ]
+          
             // MARK: - Local JSON File
             guard let fileURL = Bundle.main.url(forResource: type.topScorerResource, withExtension: "json") else {
                 throw APIError.unknown
@@ -62,7 +64,7 @@ extension StatsAPIClient: DependencyKey {
                 throw APIError.unknown
             }
         },
-        getTopAssists: { type in
+        getTopAssists: { type, isUseJSON in
             var components = URLComponents(string: "https://v3.football.api-sports.io/fixtures")!
             components.queryItems = [
                 .init(name: "season", value: "2023"),

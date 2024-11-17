@@ -57,6 +57,7 @@ let package = Package(
           "API",
           "Entities",
           "Extensions",
+          "Utilities",
           .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
         ]
       ),
@@ -66,6 +67,7 @@ let package = Package(
           "API",
           "Entities",
           "Extensions",
+          "Utilities",
           .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
         ]
       ),
@@ -75,6 +77,7 @@ let package = Package(
           "API",
           "Entities",
           "Extensions",
+          "Utilities",
           .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
           .product(name: "Kingfisher", package: "Kingfisher")
         ]
@@ -88,8 +91,13 @@ let package = Package(
           "StandingFeature",
           "StatFeature",
           "FixtureFeature",
+          "Utilities",
           .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
         ]
+      ),
+      .target(
+        name: "Utilities",
+        dependencies: []
       ),
     ]
 )

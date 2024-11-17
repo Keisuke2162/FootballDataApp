@@ -69,6 +69,8 @@ public struct SelectLeagueView: View {
           }
         }
       }
+      
+      
     }
   }
 }

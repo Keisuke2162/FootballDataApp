@@ -11,6 +11,7 @@ import ComposableArchitecture
 import Entities
 import Kingfisher
 import SwiftUI
+import Utilities
 
 @Reducer
 public struct FixtureDetailReducer : Sendable{
@@ -38,16 +39,17 @@ public struct FixtureDetailReducer : Sendable{
   public init() {}
   
   @Dependency(\.fixtureClient) var fixtureClient
+  @AppStorage(.useJSON) var isUseJSON
+
   private enum CancelID { case fixtureDetail }
   
   public var body: some Reducer<State, Action> {
     Reduce { state, action in
       switch action {
       case .fetchFixtureDetail:
-        //await send(.fixturesResponseHome(Result { try await self.fixtureClient.getFixtureDetail(teamID: homeID, fixtureID: fixtureID, isHome: true) }))
         return .run { [fixtureID = state.fixture.id, homeID = state.fixture.teams.home.id, awayID = state.fixture.teams.away.id] send in
-          await send(.fixturesResponseHome(Result { try await self.fixtureClient.getFixtureDetail(homeID, fixtureID, true) }))
-          await send(.fixturesResponseAway(Result { try await self.fixtureClient.getFixtureDetail(awayID, fixtureID, false) }))
+          await send(.fixturesResponseHome(Result { try await self.fixtureClient.getFixtureDetail(homeID, fixtureID, true, isUseJSON) }))
+          await send(.fixturesResponseAway(Result { try await self.fixtureClient.getFixtureDetail(awayID, fixtureID, false, isUseJSON) }))
         }
       case let .fixturesResponseHome(.success(response)):
         state.fixtureDetailHome = response
