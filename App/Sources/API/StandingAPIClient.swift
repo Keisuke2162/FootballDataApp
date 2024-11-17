@@ -45,7 +45,7 @@ extension StandingClient: DependencyKey {
           .init(name: "league", value: type.id)
         ]
         var request = URLRequest(url: components.url!)
-        request.setValue("14a6551f30510e7202fcb46ff94fc54f", forHTTPHeaderField: "x-apisports-key")
+        request.setValue(APIKey.footballAPIKey, forHTTPHeaderField: "x-apisports-key")
         request.httpMethod = "GET"
         
         (data, _) = try await URLSession.shared.data(for: request)
