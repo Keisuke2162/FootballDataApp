@@ -10,9 +10,10 @@ import Foundation
 import ComposableArchitecture
 import Entities
 import SwiftUI
+import Utilities
 
 @Reducer
-public struct PlayerStatsReducer : Sendable{
+public struct PlayerStatsReducer : Sendable {
   @ObservableState
   public struct State: Equatable {
     public let leagueType: LeagueType
@@ -24,13 +25,15 @@ public struct PlayerStatsReducer : Sendable{
       self.statType = statType
     }
   }
-  
+
   public enum Action {
     case fetchTopScorer
     case topScorerResponse(Result<[PlayerStats], Error>)
   }
   
   @Dependency(\.statsAPIClient) var statsAPIClient
+  @AppStorage(.useJSON) var isUseJson
+
   private enum CancelID { case stats }
   
   public init() {
@@ -44,9 +47,9 @@ public struct PlayerStatsReducer : Sendable{
           await send(.topScorerResponse(Result {
             switch statsType {
             case .topScorers:
-              try await self.statsAPIClient.getTopScorers(leagueType)
+              try await self.statsAPIClient.getTopScorers(leagueType, isUseJson)
             case .topAssists:
-              try await self.statsAPIClient.getTopAssists(leagueType)
+              try await self.statsAPIClient.getTopAssists(leagueType, isUseJson)
             }
           }))
         }

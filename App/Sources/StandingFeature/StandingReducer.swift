@@ -10,6 +10,7 @@ import Foundation
 import ComposableArchitecture
 import Entities
 import SwiftUI
+import Utilities
 
 @Reducer
 public struct StandingReducer : Sendable{
@@ -17,7 +18,7 @@ public struct StandingReducer : Sendable{
   public struct State: Equatable {
     public let leagueType: LeagueType
     public var standings: [Standing] = []
-    
+
     public init(leagueType: LeagueType) {
       self.leagueType = leagueType
     }
@@ -30,6 +31,8 @@ public struct StandingReducer : Sendable{
   }
   
   @Dependency(\.standingClient) var standingClient
+  @AppStorage(.useJSON) var isUseJSON
+
   private enum CancelID { case standing }
   
   public init() {
@@ -42,7 +45,7 @@ public struct StandingReducer : Sendable{
         return .none
       case .fetchStandings:   // データ取得開始
         return .run { [leagueType = state.leagueType] send in
-          await send(.standingResponse(Result { try await self.standingClient.getStanding(leagueType) }))
+          await send(.standingResponse(Result { try await self.standingClient.getStanding(leagueType, isUseJSON) }))
         }
         .cancellable(id: CancelID.standing)
       case .standingResponse(.failure):   // APIエラー時

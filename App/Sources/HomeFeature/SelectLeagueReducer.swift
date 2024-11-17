@@ -15,7 +15,7 @@ public struct SelectLeagueReducer : Sendable{
   @ObservableState
   public struct State: Equatable {
     public var selectedLeagueType: LeagueType
-    
+
     public init(selectedLeagueType: LeagueType) {
       self.selectedLeagueType = selectedLeagueType
     }
@@ -32,6 +32,7 @@ public struct SelectLeagueReducer : Sendable{
   }
   
   @Dependency(\.dismiss) var dismiss
+  
   
   public init() {
   }
@@ -54,20 +55,29 @@ public struct SelectLeagueReducer : Sendable{
 
 public struct SelectLeagueView: View {
   @Bindable var store: StoreOf<SelectLeagueReducer>
+  @AppStorage(.useJSON) var isUseJSON
   
   public var body: some View {
-    List {
-      ForEach(LeagueType.allCases) { type in
-        Button {
-          store.send(.tapLeagueCell(type))
-        } label: {
-          HStack(spacing: 16) {
-            type.iconImage
-              .resizable()
-              .frame(width: 40, height: 40)
-            Text(type.name)
+    Form {
+      Section("League") {
+        List {
+          ForEach(LeagueType.allCases) { type in
+            Button {
+              store.send(.tapLeagueCell(type))
+            } label: {
+              HStack(spacing: 16) {
+                type.iconImage
+                  .resizable()
+                  .frame(width: 40, height: 40)
+                Text(type.name)
+              }
+            }
           }
         }
+      }
+
+      Section("Feature Flag") {
+        Toggle("Use JSON Data", isOn: $isUseJSON)
       }
     }
   }

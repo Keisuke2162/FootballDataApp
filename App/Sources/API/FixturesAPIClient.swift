@@ -8,14 +8,17 @@
 import Entities
 import Dependencies
 import DependenciesMacros
+import Utilities
 import XCTestDynamicOverlay
 import Foundation
+import SwiftUI
+import ComposableArchitecture
 
 // MARK: Client
 @DependencyClient
 public struct FixturesClient : Sendable {
-  public var getFixtures: @Sendable (_ type: LeagueType) async throws -> FixturesItem
-  public var getFixtureDetail: @Sendable (_ teamID: Int, _ fixtureID: Int, _ isHome: Bool) async throws -> FixtureDetail
+  public var getFixtures: @Sendable (_ type: LeagueType, _ isUseJSON: Bool) async throws -> FixturesItem
+  public var getFixtureDetail: @Sendable (_ teamID: Int, _ fixtureID: Int, _ isHome: Bool, _ isUseJSON: Bool) async throws -> FixtureDetail
 }
 
 // MARK: TestKey
@@ -35,21 +38,28 @@ extension FixturesClient: TestDependencyKey {
 extension FixturesClient: DependencyKey {
   public static let liveValue: Self = {
     return Self(
-      getFixtures: { type in
-        var components = URLComponents(string: "https://v3.football.api-sports.io/fixtures")!
-        //https://v3.football.api-sports.io/fixtures?season=2021&league=39
-        components.queryItems = [
-          .init(name: "season", value: "2023"),
-          .init(name: "league", value: type.id)
-        ]
+      getFixtures: { type, isUseJSON in
+        let data: Data
         
-        // MARK: - Local JSON File
-        guard let fileURL = Bundle.main.url(forResource: type.fixturesResource, withExtension: "json") else {
-          throw APIError.unknown
+        if isUseJSON {
+          guard let fileURL = Bundle.main.url(forResource: type.fixturesResource, withExtension: "json") else {
+            throw APIError.unknown
+          }
+          data = try Data(contentsOf: fileURL)
+        } else {
+          var components = URLComponents(string: "https://v3.football.api-sports.io/fixtures")!
+          components.queryItems = [
+            .init(name: "season", value: "2022"),
+            .init(name: "league", value: type.id)
+          ]
+          var request = URLRequest(url: components.url!)
+          request.setValue(APIKey.footballAPIKey, forHTTPHeaderField: "x-apisports-key")
+          request.httpMethod = "GET"
+          
+          (data, _) = try await URLSession.shared.data(for: request)
         }
-        
+
         do {
-          let data = try Data(contentsOf: fileURL)
           let decoder = JSONDecoder()
           let dateFormatter = DateFormatter()
           dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -60,11 +70,32 @@ extension FixturesClient: DependencyKey {
           throw APIError.unknown
         }
       },
-      getFixtureDetail: { teamID, fixtureID, isHome in
-        let resource = isHome ? "football_api_statistics_2024_98_282" : "football_api_statistics_2024_98_287"
-        guard let fileURL = Bundle.main.url(forResource: resource, withExtension: "json") else { throw APIError.unknown }
+      getFixtureDetail: { teamID, fixtureID, isHome, isUseJSON in
+        let data: Data
+        
+        if isUseJSON {
+          let resource = isHome ? "football_api_statistics_2024_98_282" : "football_api_statistics_2024_98_287"
+          guard let fileURL = Bundle.main.url(forResource: resource, withExtension: "json") else {
+            throw APIError.unknown
+          }
+          data = try Data(contentsOf: fileURL)
+        } else {
+          var components = URLComponents(string: "https://v3.football.api-sports.io/fixtures/statistics")!
+          components.queryItems = [
+            .init(name: "fixture", value: String(fixtureID)),
+            .init(name: "team", value: String(teamID))
+          ]
+          
+          var request = URLRequest(url: components.url!)
+          request.setValue(APIKey.footballAPIKey, forHTTPHeaderField: "x-apisports-key")
+          request.httpMethod = "GET"
+          
+          (data, _) = try await URLSession.shared.data(for: request)
+        }
+        
+        print(String(data: data, encoding: .utf8) ?? "Invalid JSON")
+        
         do {
-          let data = try Data(contentsOf: fileURL)
           let decoder = JSONDecoder()
           let dateFormatter = DateFormatter()
           dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -75,7 +106,6 @@ extension FixturesClient: DependencyKey {
           }
           return response
         } catch {
-          print("テスト4 \(error)")
           throw APIError.unknown
         }
       }
