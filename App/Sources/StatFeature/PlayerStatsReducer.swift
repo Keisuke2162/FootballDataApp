@@ -67,16 +67,18 @@ public struct PlayerStatsView: View {
   public var body: some View {
     NavigationStack {
       List {
-        ForEach(store.topScorerStats) { scorer in
-          PlayerStatsListCell(statType: store.state.statType, playerStatsItem: scorer)
-            .frame(height: 46)
+        ForEach(Array(store.topScorerStats.enumerated()), id: \.offset) { index, item in
+          PlayerStatsListCell(statType: store.state.statType, playerStatsItem: item, order: index)
             .listRowBackground(Color.clear)
         }
-        Spacer().frame(height: 50).listRowBackground(EmptyView())
+        .listRowSeparator(.hidden)
+        Spacer().frame(height: 120).listRowBackground(EmptyView())
+          .listRowSeparator(.hidden)
       }
+      .padding(.top, 16)
       .scrollContentBackground(.hidden)
       .background(store.state.leagueType.themaColor)
-      .listStyle(.grouped)
+      .listStyle(.plain)
     }
     .task {
       do {

@@ -62,6 +62,10 @@ public struct FixtureTeam: Codable, Sendable {
   public let name: String
   public let logo: String
   public let winner: Bool?
+  
+  public var theme: ClubTheme {
+    ClubTheme(rawValue: id) ?? .other
+  }
 }
 
 public struct FixtureGoals: Codable {

@@ -1,14 +1,8 @@
-//
-//  FixturesListCell.swift
-//  FootballDataManager
-//
-//  Created by Kei on 2024/02/28.
-//
-
 import ComposableArchitecture
 import Kingfisher
 import SwiftUI
 import Entities
+import Extensions
 
 public struct FixturesListCell: View {
   public let fixture: Fixture
@@ -18,30 +12,50 @@ public struct FixturesListCell: View {
   }
   
   public var body: some View {
-    HStack {
-      Spacer()
-      KFImage(URL(string: fixture.teams.home.logo))
-        .resizable()
-        .scaledToFit()
-        .frame(width: 40, height: 40)
-      Spacer()
-      Text(fixture.goals.home?.description ?? "")
-        .foregroundColor(Color.white)
-        .font(.custom("SSportsD-Medium", size: 16))
+    HStack(spacing: .zero) {
+      HStack {
+        KFImage(URL(string: fixture.teams.home.logo))
+          .resizable()
+          .frame(width: 56, height: 56)
+          .aspectRatio(contentMode: .fill)
+          .padding(.leading, 32)
+          .padding(.vertical, 16)
+        Spacer()
+        Text(fixture.goals.home?.description ?? "")
+          .foregroundColor(Color.white)
+          .font(.custom("SSportsD-Medium", size: 32))
+          .padding(.trailing, 16)
+      }
+      
       Text("-")
         .foregroundColor(Color.white)
-        .font(.custom("SSportsD-Medium", size: 16))
-      Text(fixture.goals.away?.description ?? "")
-        .foregroundColor(Color.white)
-        .font(.custom("SSportsD-Medium", size: 16))
-      Spacer()
-      KFImage(URL(string: fixture.teams.away.logo))
-        .resizable()
-        .scaledToFit()
-        .frame(width: 40, height: 40)
-      Spacer()
+        .font(.custom("SSportsD-Medium", size: 32))
+        .padding(.horizontal, 8)
+      
+      HStack {
+        Text(fixture.goals.away?.description ?? "")
+          .foregroundColor(Color.white)
+          .font(.custom("SSportsD-Medium", size: 32))
+          .padding(.leading, 16)
+        Spacer()
+        KFImage(URL(string: fixture.teams.away.logo))
+          .resizable()
+          .frame(width: 56, height: 56)
+          .aspectRatio(contentMode: .fill)
+          .padding(.trailing, 32)
+          .padding(.vertical, 16)
+      }
     }
-    .frame(height: 56)
-    .listRowBackground(Color.clear)
+    .background {
+      LinearGradient(
+        gradient: Gradient(colors: [
+          Color(hexValue: fixture.teams.home.theme.mainColorCode),
+          Color(hexValue: fixture.teams.away.theme.mainColorCode)
+        ]),
+        startPoint: .leading,
+        endPoint: .trailing
+      )
+    }
+    .clipShape(RoundedRectangle(cornerRadius: 16))
   }
 }

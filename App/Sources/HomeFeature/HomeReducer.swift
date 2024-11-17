@@ -17,11 +17,12 @@ import StatFeature
 public struct HomeReducer {
   @ObservableState
   public struct State: Equatable {
+    public var currentTab: DisplayTab = .table
     @Presents var destination: Destination.State?
-    public var selectedLeagueType: LeagueType = .england
-    public var standingList = StandingReducer.State(leagueType: .england)
-    public var fixtureSchedule = FixturesReducer.State(leagueType: .england)
-    public var statsList = StatsContainerReducer.State(leagueType: .england)
+    public var selectedLeagueType: LeagueType = .japan
+    public var standingList = StandingReducer.State(leagueType: .japan)
+    public var fixtureSchedule = FixturesReducer.State(leagueType: .japan)
+    public var statsList = StatsContainerReducer.State(leagueType: .japan)
     
     public init() {
     }
@@ -33,6 +34,7 @@ public struct HomeReducer {
     case standingList(StandingReducer.Action)
     case fixtureSchedule(FixturesReducer.Action)
     case statsList(StatsContainerReducer.Action)
+    case selectTab(DisplayTab)
   }
   
   public init() {
@@ -71,6 +73,9 @@ public struct HomeReducer {
         return .none
       case .statsList:
         return .none
+      case let .selectTab(tab):
+        state.currentTab = tab
+        return .none
       }
     }
     .ifLet(\.$destination, action: \.destination)
@@ -91,34 +96,24 @@ public struct HomeView: View {
   
   public init(store: StoreOf<HomeReducer>) {
     self.store = store
+    UITabBar.appearance().isHidden = true
   }
   
   public var body: some View {
     NavigationView {
       ZStack {
-        TabView {
-          StandingView(store: store.scope(state: \.standingList, action: \.standingList))
-            .tabItem {
-              Image(systemName: "list.bullet.rectangle.fill")
-              Text("Table")
-            }
-            .toolbarBackground(.white, for: .tabBar)
-            .toolbarBackground(.visible, for: .tabBar)
-          FixturesView(store: store.scope(state: \.fixtureSchedule, action: \.fixtureSchedule))
-            .tabItem {
-              Image(systemName: "sportscourt.fill")
-              Text("Fixture")
-            }
-            .toolbarBackground(.white, for: .tabBar)
-            .toolbarBackground(.visible, for: .tabBar)
-          StatsContainerView(store: store.scope(state: \.statsList, action: \.statsList))
-            .tabItem {
-              Image(systemName: "figure.soccer")
-              Text("Stats")
-            }
-            .toolbarBackground(.white, for: .tabBar)
-            .toolbarBackground(.visible, for: .tabBar)
+        VStack(spacing: .zero) {
+          TabView(selection: $store.currentTab.sending(\.selectTab)) {
+            StandingView(store: store.scope(state: \.standingList, action: \.standingList))
+              .tag(DisplayTab.table)
+            FixturesView(store: store.scope(state: \.fixtureSchedule, action: \.fixtureSchedule))
+              .tag(DisplayTab.fixtures)
+            StatsContainerView(store: store.scope(state: \.statsList, action: \.statsList))
+              .tag(DisplayTab.playerStats)
+          }
         }
+        .ignoresSafeArea(.all)
+        
         VStack {
           Spacer()
           HStack {
@@ -136,7 +131,9 @@ public struct HomeView: View {
             .padding(20)
           }
           
-          Spacer().frame(height: 50).listRowBackground(EmptyView())
+          CustomTabBar(currentTab: $store.currentTab.sending(\.selectTab), colorStr: "111111")
+          
+          Spacer().frame(height: 32).listRowBackground(EmptyView())
         }
       }
     }

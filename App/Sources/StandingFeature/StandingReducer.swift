@@ -64,42 +64,34 @@ public struct StandingView: View {
   
   public var body: some View {
     NavigationStack {
-      VStack {
-        HStack(spacing: 8) {
-          Spacer().frame(width: 16)
-          Text("Pos")
-            .font(.custom("SSportsD-Medium", size: 12))
-            .frame(width: 24)
-          Text("Club")
-            .font(.custom("SSportsD-Medium", size: 12))
-            .frame(width: 32)
-            .padding(.leading, 46)
+      VStack(spacing: .zero) {
+        HStack(spacing: 16) {
           Spacer()
-          Text("P")
-            .font(.custom("SSportsD-Medium", size: 12))
-            .frame(width: 24)
+          Text("Played")
+            .foregroundStyle(Color.white)
+            .font(.custom("SSportsD-Medium", size: 16))
           Text("GD")
-            .font(.custom("SSportsD-Medium", size: 12))
-            .frame(width: 24)
-          Text("Pts")
-            .font(.custom("SSportsD-Medium", size: 12))
-            .frame(width: 24)
-          Spacer().frame(width: 16)
+            .foregroundStyle(Color.white)
+            .font(.custom("SSportsD-Medium", size: 16))
+          Text("Points")
+            .foregroundStyle(Color.white)
+            .font(.custom("SSportsD-Medium", size: 16))
         }
-        .frame(height: 32)
+        .padding(.vertical, 16)
+        .padding(.trailing, 24)
         List {
           ForEach(store.standings) { standing in
             StandingCellView(standingItem: standing)
-              .frame(height: 46)
               .listRowBackground(Color.clear)
           }
-          Spacer().frame(height: 50).listRowBackground(EmptyView())
+          .listRowSeparator(.hidden)
+          Spacer().frame(height: 120).listRowBackground(EmptyView())
+            .listRowSeparator(.hidden)
         }
         .scrollContentBackground(.hidden)
-        .background(store.state.leagueType.themaColor)
-        .listStyle(.grouped)
+        .listStyle(.plain)
       }
-      
+      .background(store.state.leagueType.themaColor)
     }
     .task {
       do {
