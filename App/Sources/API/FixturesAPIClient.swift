@@ -39,16 +39,26 @@ extension FixturesClient: DependencyKey {
   public static let liveValue: Self = {
     return Self(
       getFixtures: { type, isUseJSON in
-        var components = URLComponents(string: "https://v3.football.api-sports.io/fixtures")!
-        components.queryItems = [
-          .init(name: "season", value: "2022"),
-          .init(name: "league", value: type.id)
-        ]
-        var request = URLRequest(url: components.url!)
-        request.setValue("14a6551f30510e7202fcb46ff94fc54f", forHTTPHeaderField: "x-apisports-key")
-        request.httpMethod = "GET"
+        let data: Data
         
-        let (data, _) = try await URLSession.shared.data(for: request)
+        if isUseJSON {
+          guard let fileURL = Bundle.main.url(forResource: type.fixturesResource, withExtension: "json") else {
+            throw APIError.unknown
+          }
+          data = try Data(contentsOf: fileURL)
+        } else {
+          var components = URLComponents(string: "https://v3.football.api-sports.io/fixtures")!
+          components.queryItems = [
+            .init(name: "season", value: "2022"),
+            .init(name: "league", value: type.id)
+          ]
+          var request = URLRequest(url: components.url!)
+          request.setValue("14a6551f30510e7202fcb46ff94fc54f", forHTTPHeaderField: "x-apisports-key")
+          request.httpMethod = "GET"
+          
+          (data, _) = try await URLSession.shared.data(for: request)
+        }
+
         do {
           let decoder = JSONDecoder()
           let dateFormatter = DateFormatter()
@@ -61,17 +71,27 @@ extension FixturesClient: DependencyKey {
         }
       },
       getFixtureDetail: { teamID, fixtureID, isHome, isUseJSON in
-        var components = URLComponents(string: "https://v3.football.api-sports.io/fixtures/statistics")!
-        components.queryItems = [
-          .init(name: "fixture", value: String(fixtureID)),
-          .init(name: "team", value: String(teamID))
-        ]
-
-        var request = URLRequest(url: components.url!)
-        request.setValue("14a6551f30510e7202fcb46ff94fc54f", forHTTPHeaderField: "x-apisports-key")
-        request.httpMethod = "GET"
+        let data: Data
         
-        let (data, _) = try await URLSession.shared.data(for: request)
+        if isUseJSON {
+          let resource = isHome ? "football_api_statistics_2024_98_282" : "football_api_statistics_2024_98_287"
+          guard let fileURL = Bundle.main.url(forResource: resource, withExtension: "json") else {
+            throw APIError.unknown
+          }
+          data = try Data(contentsOf: fileURL)
+        } else {
+          var components = URLComponents(string: "https://v3.football.api-sports.io/fixtures/statistics")!
+          components.queryItems = [
+            .init(name: "fixture", value: String(fixtureID)),
+            .init(name: "team", value: String(teamID))
+          ]
+          
+          var request = URLRequest(url: components.url!)
+          request.setValue("14a6551f30510e7202fcb46ff94fc54f", forHTTPHeaderField: "x-apisports-key")
+          request.httpMethod = "GET"
+          
+          (data, _) = try await URLSession.shared.data(for: request)
+        }
         
         print(String(data: data, encoding: .utf8) ?? "Invalid JSON")
         

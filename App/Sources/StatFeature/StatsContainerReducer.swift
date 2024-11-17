@@ -18,11 +18,13 @@ public struct StatsContainerReducer {
     
     public let leagueType: LeagueType
     public var selectedStatsType: StatType = .topScorers
-    public var topScorerList = PlayerStatsReducer.State(leagueType: .england, statType: .topScorers)
-    public var topAssistList = PlayerStatsReducer.State(leagueType: .england, statType: .topAssists)
+    public var topScorerList: PlayerStatsReducer.State
+    public var topAssistList: PlayerStatsReducer.State
     
     public init(leagueType: LeagueType) {
       self.leagueType = leagueType
+      self.topScorerList = .init(leagueType: leagueType, statType: .topScorers)
+      self.topAssistList = .init(leagueType: leagueType, statType: .topAssists)
     }
   }
   

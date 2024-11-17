@@ -13,7 +13,7 @@ import SwiftUI
 import Utilities
 
 @Reducer
-public struct PlayerStatsReducer : Sendable{
+public struct PlayerStatsReducer : Sendable {
   @ObservableState
   public struct State: Equatable {
     public let leagueType: LeagueType
